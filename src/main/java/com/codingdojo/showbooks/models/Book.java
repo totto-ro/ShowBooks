@@ -34,7 +34,7 @@ public class Book {
     private String language;
     @NotNull
     @Min(100)
-    private Integer number_of_pages;
+    private Integer numberOfPages;
     // This will not allow the createdAt column to be updated after creation
     @Column(updatable=false)
     @DateTimeFormat(pattern="yyyy-MM-dd")
@@ -45,19 +45,19 @@ public class Book {
     public Book() {
     }
     
-    public Book(String title, String desc, String lang, int pages) {
+    public Book(String title, String desc, String lang, int number_of_pages) {
         this.title = title;
         this.description = desc;
         this.language = lang;
-        this.number_of_pages = pages;
+        this.numberOfPages = number_of_pages;
     }
     
-    public Book(Long id, String title, String desc, String lang, int pages) {
+    public Book(Long id, String title, String desc, String lang, int number_of_pages) {
 		this.id = id;
         this.title = title;
         this.description = desc;
         this.language = lang;
-        this.number_of_pages = pages;
+        this.numberOfPages = number_of_pages;
     }
 
 	public Long getId() {
@@ -93,11 +93,11 @@ public class Book {
 	}
 
 	public Integer getNumberOfPages() {
-		return number_of_pages;
+		return numberOfPages;
 	}
 
 	public void setNumberOfPages(Integer number_of_pages) {
-		this.number_of_pages = number_of_pages;
+		this.numberOfPages = number_of_pages;
 	}
 	
 	public Date getCreated_at() {

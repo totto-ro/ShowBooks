@@ -27,15 +27,10 @@ public class BookService {
         return bookRepository.save( book );
     }
     
-    // update a book
-    public Book updateBook( Long id, String title, String description, String lang, int pages ) {
-    	Book book = new Book (id, title, description, lang, pages);
-        return bookRepository.save(book);
-    }
+   
     
- // update a book2
-    public Book updateBook2(Book book) {
-    	//Book book = new Book (id, title, description, lang, pages);
+    // updates a book
+    public Book updateBook(Book book) {
         return bookRepository.save(book);
     }
     
